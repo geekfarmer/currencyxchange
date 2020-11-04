@@ -10,7 +10,13 @@
     "build:cjs": "tsc -p tsconfig.cjs.json",
     "build:esm": "tsc -p tsconfig.esm.json",
     "build:umd": "webpack",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
+    "lint": "tslint -p tsconfig.json",
+    "postversion" : "git push && git push --tags",
+    "prepare" : "npm run build",
+    "preversion" : "npm run lint",
+    "version" : "npm run format && git add -A src"
   },
   "repository": {
     "type": "git",
@@ -34,8 +40,10 @@
     "eslint": "^6.3.0",
     "eslint-config-prettier": "^6.1.0",
     "eslint-plugin-prettier": "^3.1.0",
-    "prettier": "^1.18.2",
+    "prettier": "^1.19.1",
     "ts-loader": "^6.0.4",
+    "tslint": "^6.1.3",
+    "tslint-config-prettier": "^1.18.0",
     "typescript": "^3.6.2",
     "webpack": "^4.39.3",
     "webpack-cli": "^3.3.7"
