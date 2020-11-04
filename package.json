@@ -1,5 +1,5 @@
 {
-  "name": "typescript-npm-package-template",
+  "name": "currencyxchange",
   "version": "0.0.1",
   "description": "",
   "main": "lib/index.js",
@@ -14,7 +14,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/zaki-yama/typescript-npm-package-template.git"
+    "url": "git+https://github.com/zaki-yama/currencyxchange.git"
   },
   "files": [
     "lib",
@@ -25,9 +25,9 @@
   "author": "",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/zaki-yama/typescript-npm-package-template/issues"
+    "url": "https://github.com/zaki-yama/currencyxchange/issues"
   },
-  "homepage": "https://github.com/zaki-yama/typescript-npm-package-template#readme",
+  "homepage": "https://github.com/zaki-yama/currencyxchange#readme",
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^2.1.0",
     "@typescript-eslint/parser": "^2.1.0",
