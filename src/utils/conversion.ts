@@ -9,11 +9,11 @@ export class Conversion extends ApiClient {
     super("https://api.exchangeratesapi.io");
   }
 
-  public getConversion = (data: RequestData) => {
+  public getConversion = (base: string) => {
     const rates = get("rates");
     if (rates) return rates;
     return this.instance
-      .get<ResponseData>(`/latest?base=${data.from}`)
+      .get<ResponseData>(`/latest?base=${base}`)
       .then((res) => res)
       .catch((error: AxiosError) => {
         console.log(error.message);

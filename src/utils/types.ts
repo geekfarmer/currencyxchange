@@ -13,6 +13,7 @@ export interface ConversionType {
   amount: number
   from: string
   to: string
+  rates: any,
   minimumFractionDigits?: number
   maximumFractionDigits?: number
   minimumSignificantDigits?: number

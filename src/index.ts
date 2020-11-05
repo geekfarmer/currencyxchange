@@ -1,5 +1,6 @@
-import { formatCurrency } from './formatter'
+import { formatCurrency, getConversions } from './formatter'
 
 export { 
-  formatCurrency
+  formatCurrency,
+  getConversions
 }
