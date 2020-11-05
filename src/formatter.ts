@@ -27,7 +27,7 @@ export function formatCurrency(data: ConversionType) {
     const price = formattedPrice(to, convertedAmount);
     return price;
   }
-  return;
+  return formattedPrice(from, amount.toString());
 }
 
 export async function getConversions(base: string) {

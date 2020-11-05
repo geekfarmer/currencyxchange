@@ -46,14 +46,14 @@ test("#on succesful conversion", async () => {
   expect(formattedPrice).toEqual("₹74");
 });
 
-test("#on no conversion conversion", async () => {
+test("#on no conversion found", async () => {
   const formattedPrice: string = formatCurrency({
     amount: 0.99,
     from: "USD",
     to: "COP",
     rates: mockRates,
   });
-  expect(formattedPrice).toEqual(undefined);
+  expect(formattedPrice).toEqual("$0.99");
 });
 
 test("#on invalid currency conversion", async () => {
