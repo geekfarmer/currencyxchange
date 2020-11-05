@@ -89,7 +89,7 @@ export const formattedPrice = (currency: string, amount: string) => {
   }
 };
 
-export const supportedCurrencies = [
+export const supportedCurrencies: string[] = [
   "INR",
   "USD",
   "MXN",

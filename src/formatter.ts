@@ -1,8 +1,7 @@
 import { Conversion } from "./utils/conversion";
 import { ConversionType } from "./utils/types";
 import { formattedPrice, supportedCurrencies } from "./data/data";
-import { get, set } from "./utils/cache/cache";
-import { AxiosError } from "axios";
+import { set } from "./utils/cache/cache";
 
 const converion = new Conversion();
 
