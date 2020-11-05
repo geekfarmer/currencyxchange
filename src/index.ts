@@ -1,3 +1,5 @@
-import { add } from "./myModule";
+import { formatCurrency } from './formatter'
 
-export { add };
+export { 
+  formatCurrency
+}

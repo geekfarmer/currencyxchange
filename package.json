@@ -1,51 +1,30 @@
 {
-  "name": "currencyxchange",
-  "version": "0.0.1",
-  "description": "",
-  "main": "lib/index.js",
-  "module": "esm/index.js",
-  "types": "lib/index.d.js",
+  "name": "dom-event-utils",
+  "version": "1.1.0",
+  "description": "Very small library that makes working with DOM event emitters API a little easier to work with",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
-    "build": "npm run build:cjs && npm run build:esm && npm run build:umd",
-    "build:cjs": "tsc -p tsconfig.cjs.json",
-    "build:esm": "tsc -p tsconfig.esm.json",
-    "build:umd": "webpack",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
-    "lint": "tslint -p tsconfig.json",
-    "postversion" : "git push && git push --tags",
-    "prepare" : "npm run build",
-    "preversion" : "npm run lint",
-    "version" : "npm run format && git add -A src"
+    "build": "tsc",
+    "test": "jest --config=jest.config.json",
+    "prepublish": "npm test"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/zaki-yama/currencyxchange.git"
-  },
-  "files": [
-    "lib",
-    "esm",
-    "umd"
+  "keywords": [
+    "events",
+    "eventemitter",
+    "util"
   ],
-  "keywords": [],
-  "author": "",
+  "author": "Cameron Nokes",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/zaki-yama/currencyxchange/issues"
-  },
-  "homepage": "https://github.com/zaki-yama/currencyxchange#readme",
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^2.1.0",
-    "@typescript-eslint/parser": "^2.1.0",
-    "eslint": "^6.3.0",
-    "eslint-config-prettier": "^6.1.0",
-    "eslint-plugin-prettier": "^3.1.0",
-    "prettier": "^1.19.1",
-    "ts-loader": "^6.0.4",
-    "tslint": "^6.1.3",
-    "tslint-config-prettier": "^1.18.0",
-    "typescript": "^3.6.2",
-    "webpack": "^4.39.3",
-    "webpack-cli": "^3.3.7"
+    "@types/jest": "^22.2.3",
+    "@types/node": "^9.4.6",
+    "jest": "^22.4.4",
+    "ts-jest": "^22.4.6",
+    "typescript": "^2.7.2"
+  },
+  "dependencies": {
+    "axios": "^0.21.0",
+    "node-cache": "^5.1.2"
   }
 }
