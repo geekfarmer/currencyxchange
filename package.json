@@ -1,7 +1,7 @@
 {
-  "name": "dom-event-utils",
+  "name": "currencyxchange",
   "version": "1.1.0",
-  "description": "Very small library that makes working with DOM event emitters API a little easier to work with",
+  "description": "A small library to get formatted currency conversion",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
@@ -10,11 +10,11 @@
     "prepublish": "npm test"
   },
   "keywords": [
-    "events",
-    "eventemitter",
-    "util"
+    "conversion",
+    "currency",
+    "money"
   ],
-  "author": "Cameron Nokes",
+  "author": "Anurag Patel",
   "license": "MIT",
   "devDependencies": {
     "@types/jest": "^22.2.3",
