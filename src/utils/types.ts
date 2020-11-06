@@ -12,8 +12,9 @@ export interface ResponseData {
 export interface ConversionType {
   amount: number
   from: string
-  to: string
+  to?: string
   rates: any,
+  country?: string,
   minimumFractionDigits?: number
   maximumFractionDigits?: number
   minimumSignificantDigits?: number

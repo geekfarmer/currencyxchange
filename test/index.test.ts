@@ -38,12 +38,12 @@ const mockRates = {
 
 test("#on succesful conversion", async () => {
   const formattedPrice: string = formatCurrency({
-    amount: 0.99,
+    amount: 0,
     from: "USD",
-    to: "INR",
+    country: "IN",
     rates: mockRates,
   });
-  expect(formattedPrice).toEqual("₹74");
+  expect(formattedPrice).toEqual("₹0");
 });
 
 test("#on no conversion found", async () => {
@@ -63,5 +63,5 @@ test("#on invalid currency conversion", async () => {
     to: "ZZZ",
     rates: mockRates,
   });
-  expect(formattedPrice).toEqual(undefined);
+  expect(formattedPrice).toEqual("$0.99");
 });
