@@ -1,10 +1,6 @@
-import { Conversion } from "./utils/conversion";
 import { ConversionType } from "./utils/types";
 import { formattedPrice, supportedCurrencies } from "./data/data";
 import { currencies } from './data/currencies';
-import { get, set } from "./utils/cache/cache";
-
-const converion = new Conversion();
 
 export function formatCurrency(data: ConversionType) {
   const {
@@ -35,11 +31,4 @@ export function formatCurrency(data: ConversionType) {
     return price;
   }
   return formattedPrice(from, amount.toString());
-}
-
-export async function getConversions(base: string) {
-  const currencyConversion: any = await converion.getConversion(base);
-  if (!get("rates")) set("rates", currencyConversion);
-  const rates = currencyConversion.rates;
-  return rates;
 }

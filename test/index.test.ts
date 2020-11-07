@@ -1,4 +1,4 @@
-import { formatCurrency } from "../src/index";
+import { formatCurrency, getCurrencyRateList, getCurrencyRate } from "../src/index";
 
 const mockRates = {
   CAD: 1.3148195546,

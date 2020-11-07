@@ -1,11 +1,41 @@
-import * as NodeCache from 'node-cache';
+import * as NodeCache from "node-cache";
 
-const cache = new NodeCache();
+class CacheService {
+  cache: NodeCache;
 
-export const get = (key: string) => {
-  return cache.get(key)
+  constructor(ttl: number) {
+    this.cache = new NodeCache({
+      stdTTL: ttl,
+      checkperiod: ttl * 0.2,
+      useClones: false,
+    });
+  }
+
+  get(key: string, fetchData: Function) {
+    const value = this.cache.get(key);
+
+    if (value) {
+      console.log("fetchData....1");
+      return Promise.resolve(value);
+    }
+
+    if (!fetchData) {
+      return undefined;
+    }
+
+    return fetchData().then((result: any) => {
+      this.cache.set(key, result);
+      return result;
+    });
+  }
+
+  del(keys: string[]) {
+    this.cache.del(keys);
+  }
+
+  flush() {
+    this.cache.flushAll();
+  }
 }
 
-export const set = (key: string, value: any) => {
-  return cache.set(key, value, 24 * 60 * 60)
-}
+export default CacheService;

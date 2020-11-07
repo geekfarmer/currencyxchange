@@ -1,6 +1,8 @@
-import { formatCurrency, getConversions } from './formatter'
+import { formatCurrency } from './formatter'
+import { getCurrencyRate, getCurrencyRateList } from './converter'
 
-export { 
+export {
   formatCurrency,
-  getConversions
+  getCurrencyRate,
+  getCurrencyRateList
 }
