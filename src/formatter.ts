@@ -1,4 +1,4 @@
-import { ConversionType } from "./utils/types";
+import { ConversionType } from "./types";
 import { formattedPrice, supportedCurrencies } from "./data/data";
 import { currencies } from './data/currencies';
 

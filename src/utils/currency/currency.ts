@@ -1,5 +1,5 @@
 import { ApiClient } from "./api-client";
-import { ResponseData } from "../types";
+import { ResponseData } from "../../types";
 import { API, LATEST } from '../../constants'
 
 export class Currency extends ApiClient {

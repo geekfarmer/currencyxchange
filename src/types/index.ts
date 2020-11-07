@@ -20,3 +20,8 @@ export interface ConversionType {
   minimumSignificantDigits?: number
   maximumSignificantDigits?: number
 }
+
+export interface CurrencySymbol {
+  country: string
+  currency: string
+}

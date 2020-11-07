@@ -15,7 +15,7 @@ class CacheService {
     const value = this.cache.get(key);
 
     if (value) {
-      console.log("fetchData....1");
+      console.log(`Fetching ${key} data from cache...`);
       return Promise.resolve(value);
     }
 
@@ -24,6 +24,7 @@ class CacheService {
     }
 
     return fetchData().then((result: any) => {
+      console.log(`Fetching ${key} data from API...`);
       this.cache.set(key, result);
       return result;
     });

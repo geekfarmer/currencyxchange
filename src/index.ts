@@ -1,8 +1,11 @@
-import { formatCurrency } from './formatter'
-import { getCurrencyRate, getCurrencyRateList } from './converter'
+import { formatCurrency } from "./formatter";
+import { getCurrencyRate, getCurrencyRateList } from "./converter";
+import { getCurrencyCode, getCurrencySymbol } from "./extra";
 
 export {
   formatCurrency,
   getCurrencyRate,
-  getCurrencyRateList
-}
+  getCurrencyRateList,
+  getCurrencyCode,
+  getCurrencySymbol,
+};
