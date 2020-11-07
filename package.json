@@ -1,7 +1,7 @@
 {
   "name": "currencyxchange",
-  "version": "2.1.0",
-  "description": "A small library to get formatted currency conversion",
+  "version": "2.1.1",
+  "description": "A light weight library for currency locale and exchange rates. Currency x-change module use auto caching of exchange rates.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
@@ -13,9 +13,15 @@
   "keywords": [
     "conversion",
     "currency",
-    "money"
+    "money",
+    "exchange",
+    "currency exchange rates",
+    "real-time",
+    "xchange",
+    "currencyxchange",
+    "convert"
   ],
-  "author": "Anurag Patel",
+  "author": "geekfarmer",
   "license": "MIT",
   "devDependencies": {
     "@types/jest": "^22.2.3",

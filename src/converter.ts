@@ -8,14 +8,14 @@ const currency = new Currency();
 // Create a new cache service instance
 const cache = new CacheService(TTL);
 
-export async function getCurrencyRate(base: string = DEFAULT_BASE) {
+export async function getCurrencyRate(base: string = DEFAULT_BASE): Promise<any> {
   const cuurencyRate = await cache.get(`rate_${base}`, () =>
     currency.getConversion(base)
   );
   return cuurencyRate;
 }
 
-export async function getCurrencyRateList() {
+export async function getCurrencyRateList(): Promise<any> {
   const cuurencyRateList = supportedCurrencies.map((base) =>
     getCurrencyRate(base)
   );

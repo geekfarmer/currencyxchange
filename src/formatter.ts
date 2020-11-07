@@ -2,7 +2,7 @@ import { ConversionType } from "./types";
 import { formattedPrice, supportedCurrencies } from "./data/data";
 import { currencies } from './data/currencies';
 
-export function formatCurrency(data: ConversionType) {
+export function formatCurrency(data: ConversionType): string {
   const {
     amount,
     country,
@@ -27,8 +27,7 @@ export function formatCurrency(data: ConversionType) {
       style: "decimal",
       maximumFractionDigits,
     }).format(amount * rates[to]);
-    const price = formattedPrice(to, convertedAmount);
-    return price;
+    return formattedPrice(to, convertedAmount);
   }
   return formattedPrice(from, amount.toString());
 }

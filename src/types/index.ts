@@ -22,6 +22,6 @@ export interface ConversionType {
 }
 
 export interface CurrencySymbol {
-  country: string
-  currency: string
+  country?: string
+  currency?: string
 }

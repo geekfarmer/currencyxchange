@@ -2,7 +2,7 @@ import { currencies } from "./data/currencies";
 import { symbols } from "./data/symbol";
 import { CurrencySymbol } from "./types";
 
-export function getCurrencySymbol(req: CurrencySymbol) {
+export function getCurrencySymbol(req: CurrencySymbol): string {
   let { country = "US", currency = "USD" } = req;
   country = country.toUpperCase()
   currency = currency.toUpperCase()
@@ -10,7 +10,7 @@ export function getCurrencySymbol(req: CurrencySymbol) {
   return symbols[currency];
 }
 
-export function getCurrencyCode(country: string) {
-  country = country.toUpperCase()
-  return currencies[country]
+export function getCurrencyCode(countryCode: string): string {
+  countryCode = countryCode.toUpperCase()
+  return currencies[countryCode]
 }
